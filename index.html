@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics Class Materials</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Video Section Styling */
+        .video-section {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: -30px;
+            /* Adjust to crop out the branding */
+            left: 0;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: absolute;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background-color: #ffffff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        /* Title & Subtitle */
+        .sidebar h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Content Section */
+        .content-section {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .content-section ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+        }
+
+        /* Copy Notes Icon (to toggle sidebar) */
+        .copy-notes-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .copy-notes-icon:hover {
+            background-color: #0056b3;
+        }
+
+        /* Active sidebar */
+        .sidebar.active {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-section">
+            <iframe src="https://educa.whereby.com/testing6d97f5b1-a404-407a-8fcc-1ff8f30cdc0e"
+                allow="camera; microphone; fullscreen; speaker; display-capture; compute-pressure"></iframe>
+        </div>
+
+        <!-- Copy Notes Icon -->
+        <div class="copy-notes-icon" id="toggleNotes">📖</div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h2>Economics Class Materials</h2>
+            <div class="content-section">
+                <h3>What is Economics?</h3>
+                <p>Economics is the study of how people allocate scarce resources to meet their needs and desires. It
+                    explores how individuals, businesses, and governments make decisions about resource allocation,
+                    production, and consumption.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>Key Concepts</h3>
+                <ul>
+                    <li><strong>Supply and Demand:</strong> The relationship between the availability of a good or
+                        service and the demand for it, which determines its price.</li>
+                    <li><strong>Opportunity Cost:</strong> The cost of forgoing the next best alternative when making a
+                        decision.</li>
+                    <li><strong>Elasticity:</strong> The responsiveness of the quantity demanded or supplied of a good
+                        to a change in its price.</li>
+                    <li><strong>Market Equilibrium:</strong> The point at which the quantity of a good supplied equals
+                        the quantity demanded.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3>Basic Economic Principles</h3>
+                <p>Economics is governed by a few core principles that influence the behavior of individuals and
+                    institutions:</p>
+                <ul>
+                    <li><strong>Scarcity:</strong> Limited resources vs. unlimited wants.</li>
+                    <li><strong>Rational Behavior:</strong> People make decisions to maximize their satisfaction.</li>
+                    <li><strong>Incentives:</strong> People respond to changes in incentives, such as prices or rewards.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Sidebar Visibility
+        const toggleNotes = document.getElementById('toggleNotes');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleNotes.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
